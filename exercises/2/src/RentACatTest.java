@@ -66,7 +66,6 @@ public class RentACatTest {
 	@Test
 	public void testGetCatNullNumCats0() {
 		// TODO
-		// this is a change
 	}
 
 	/**
@@ -210,6 +209,7 @@ public class RentACatTest {
 	@Test
 	public void testReturnCatFailureNumCats0() {
 		// TODO
+		//this is a change
 	}
 
 	/**
