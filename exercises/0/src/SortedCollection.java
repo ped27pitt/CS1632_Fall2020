@@ -1,9 +1,13 @@
 //TODO: Import libraries as needed
 import java.util.NoSuchElementException;
+import java.io.*;
+import java.util.*;
 
 public class SortedCollection {
 	// TODO: Add member variables or methods as needed
-
+	
+	ArrayList<int> collection = new ArrayList<int>;
+	
 	/**
 	 * Adds the number n to the collection.
 	 * 
@@ -12,6 +16,7 @@ public class SortedCollection {
 	 */
 	public boolean add(int n) {
 		// TODO: Implement
+		collection.add(n);
 		return true;
 	}
 
@@ -22,9 +27,25 @@ public class SortedCollection {
 	 */
 	public int remove() throws NoSuchElementException {
 		// TODO: Implement
-		return 0;
+		int toRemove = findSmallest( collection );
+		collection.remove( toRemove );
+		return toRemove;
 	}
-
+	
+	/**
+	* finds the smallest number in collection and returns it
+	*
+	* @return int smallest number in collection
+	*/
+	public int findSmallest(ArrayList<int> c){
+		int smallest = 999999999999999;
+		for( int i = 0; i < c.size(); i++ ){
+			if( c.get(i) < smallest; ){
+				smallest = c.get(i);
+			}
+		}
+	}
+	
 	/**
 	 * Prints usage information.
 	 */
