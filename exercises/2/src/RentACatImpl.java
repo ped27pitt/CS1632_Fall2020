@@ -60,14 +60,14 @@ public class RentACatImpl implements RentACat {
 		String ret = "";
 		// null / zero-element check
 		if (cats == null || cats.size() == 0) {
-			return "empty";
+			return "";
 		}
 
 		// Loop through every cat in the cat list
 		for (Cat c : cats) {
 			if (c.getRented() == false) {
 				ret += c.toString();
-				ret += "\t";
+				ret += "\n";
 			}
 		}
 		// If we get all the way through the list and did
